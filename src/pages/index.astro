@@ -1,11 +1,403 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="wrap">
+
+		<header>
+			<div class="header-inner">
+				<span class="site-name">Nat Plamondon</span>
+				<nav>
+					<a href="#work">Work</a>
+					<a href="#writing">Writing</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+
+			<section class="hero">
+				<h1>Portfolio positioning for companies that outgrew their story.</h1>
+				<div class="hero-body">
+					<p>I'm an Associate Director of Product Marketing with ten years doing the work that doesn't fit a single-product playbook — platform repositioning, M&A messaging integration, and the narratives that have to hold up across an entire company.</p>
+					<p>Currently at <strong>Cornerstone OnDemand</strong>, where I've led platform repositioning twice and integrated messaging for two acquisitions.</p>
+				</div>
+			</section>
+
+			<hr />
+
+			<section id="work">
+				<div class="section-header">
+					<h2 class="section-label">Work</h2>
+					<p class="section-intro">The work I'm best known for sits at the intersection of positioning and organizational clarity — how a platform talks about itself, and how an acquisition gets absorbed without losing what made it worth acquiring.</p>
+				</div>
+
+				<div class="case-list">
+
+					<article class="case">
+						<div class="case-meta">
+							<span class="tag">Platform Repositioning</span>
+						</div>
+						<h3>From Learning Suite to Workforce Agility Platform</h3>
+						<p>Cornerstone had a strong product suite and a fragmented story. Different buyers heard different things — the LMS narrative for L&D, the performance narrative for HR, nothing coherent at the executive level. The task was to find positioning that unified the portfolio without flattening the individual products.</p>
+						<p>The "workforce agility" platform narrative reframed the portfolio around a single outcome — organizations that can continuously adapt their workforce — and gave every product a defined role in that story. The deliverable wasn't just a positioning statement: it was a full messaging architecture, from platform narrative down to product-level integration, built for a global sales and marketing team to execute consistently.</p>
+					</article>
+
+					<article class="case">
+						<div class="case-meta">
+							<span class="tag">Platform Repositioning</span>
+						</div>
+						<h3>Workforce Readiness: When the Market Shifts Under You</h3>
+						<p>The pandemic didn't just disrupt business — it disrupted the vocabulary buyers used to think about their workforce challenges. "Agility" read as abstract when leaders were staring at acute skills gaps and readiness failures. The positioning that had worked needed to evolve, not get replaced.</p>
+						<p>The second repositioning built on the platform foundation but sharpened the outcome: not agility in the abstract, but readiness — measurable, operational, tied to business continuity. This meant revisiting the entire messaging architecture, preserving what still resonated, and translating the shift in a way that felt like evolution rather than contradiction. The harder problem was consistency: creating language precise enough that a distributed global team could execute it without drift.</p>
+					</article>
+
+					<article class="case">
+						<div class="case-meta">
+							<span class="tag">M&A Messaging Integration</span>
+						</div>
+						<h3>Making Two Acquisitions Make Sense: Edcast &amp; SkyHive</h3>
+						<p>Cornerstone acquired Edcast (enterprise learning experience platform) and SkyHive (AI-powered skills intelligence) in quick succession. Both brought distinct technology, distinct audiences, and distinct market identities. The risk in acquisitions like this isn't confusion about what was acquired — it's the generic "expanded portfolio" language that makes both companies sound smaller than they were.</p>
+						<p>The work was integration without erasure. That meant finding where each acquisition strengthened the platform narrative, identifying what needed to change and what needed to stay, and building the language bridges that let sales and marketing tell a coherent combined story fast enough to support go-to-market momentum through the transition.</p>
+					</article>
+
+				</div>
+			</section>
+
+			<hr />
+
+			<section id="writing">
+				<div class="section-header">
+					<h2 class="section-label">Writing</h2>
+					<p class="section-intro">Occasional thinking on positioning, platform narratives, and what makes product marketing actually matter at scale.</p>
+				</div>
+
+				<ul class="writing-list">
+					<li>
+						<a href="https://www.linkedin.com/in/nathanielplamondon/" target="_blank" rel="noopener" class="writing-item">
+							<span class="writing-title">LinkedIn</span>
+							<span class="writing-desc">Posts on positioning, PMM craft, and enterprise SaaS — the ongoing conversation.</span>
+						</a>
+					</li>
+					<li class="writing-item writing-item--soon">
+						<span class="writing-title">Substack <span class="soon-badge">Coming soon</span></span>
+						<span class="writing-desc">Longer-form writing on portfolio positioning, M&A messaging, and the overlooked problems in product marketing.</span>
+					</li>
+				</ul>
+			</section>
+
+			<hr />
+
+			<section id="contact">
+				<div class="section-header">
+					<h2 class="section-label">Contact</h2>
+				</div>
+				<p>For conversations about positioning, platform narratives, or opportunities at scale, <a href="https://www.linkedin.com/in/nathanielplamondon/" target="_blank" rel="noopener">LinkedIn</a> is the best starting point.</p>
+			</section>
+
+		</main>
+
+		<footer>
+			<div class="footer-inner">
+				<span>Nat Plamondon</span>
+				<span>{new Date().getFullYear()}</span>
+			</div>
+		</footer>
+
+	</div>
 </Layout>
+
+<style>
+	/* Layout */
+	.wrap {
+		box-sizing: border-box;
+		max-width: 780px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0 2rem;
+	}
+
+	/* Header */
+	header {
+		background: var(--bg);
+		border-bottom: 1px solid var(--border);
+		padding: 1.25rem 0;
+	}
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.site-name {
+		font-family: var(--font-ui);
+		font-size: 15px;
+		font-weight: 600;
+		color: var(--text);
+		letter-spacing: 0;
+	}
+
+	nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	nav a {
+		font-family: var(--font-ui);
+		font-size: 11px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--text-muted);
+		text-decoration: none;
+		transition: color 0.15s;
+	}
+
+	nav a:hover {
+		color: var(--accent);
+	}
+
+	/* Hero */
+	.hero {
+		padding: 8rem 0 5rem;
+	}
+
+	h1 {
+		font-family: var(--font-ui);
+		font-size: 2.75rem;
+		font-weight: 700;
+		line-height: 1.15;
+		color: var(--text);
+		margin-bottom: 2rem;
+	}
+
+	.hero-body {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		max-width: 560px;
+	}
+
+	.hero-body p {
+		font-family: var(--font-body);
+		font-size: 17px;
+		font-weight: 400;
+		color: var(--text-muted);
+		line-height: 1.8;
+	}
+
+	.hero-body strong {
+		color: var(--accent);
+		font-weight: 600;
+	}
+
+	/* Dividers */
+	hr {
+		border: none;
+		border-top: 1px solid var(--border);
+	}
+
+	/* Sections */
+	section {
+		padding: 5rem 0;
+	}
+
+	.section-header {
+		margin-bottom: 3rem;
+	}
+
+	.section-label {
+		font-family: var(--font-body);
+		font-size: 13px;
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 0.04em;
+		color: var(--text-muted);
+		margin-bottom: 1.5rem;
+	}
+
+	.section-intro {
+		font-family: var(--font-body);
+		font-size: 17px;
+		color: var(--text-muted);
+		max-width: 540px;
+		line-height: 1.8;
+	}
+
+	/* Case studies */
+	.case-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.case {
+		background: var(--bg-surface);
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		padding: 1.5rem;
+	}
+
+	.case-meta {
+		margin-bottom: 0.6rem;
+	}
+
+	.tag {
+		font-family: var(--font-ui);
+		font-size: 10px;
+		font-weight: 400;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--accent-secondary);
+	}
+
+	.case h3 {
+		font-family: var(--font-ui);
+		font-size: 1.1rem;
+		font-weight: 600;
+		line-height: 1.3;
+		color: var(--text);
+		margin-bottom: 1rem;
+	}
+
+	.case p {
+		font-family: var(--font-body);
+		font-size: 14.5px;
+		font-weight: 400;
+		color: var(--text-muted);
+		line-height: 1.75;
+		margin-bottom: 0.75rem;
+	}
+
+	.case p:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Writing */
+	.writing-list {
+		list-style: none;
+	}
+
+	.writing-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		padding: 1.25rem 0;
+		border-bottom: 1px solid var(--border);
+		text-decoration: none;
+		color: var(--text);
+	}
+
+	.writing-list li:first-child > .writing-item,
+	.writing-list li:first-child.writing-item {
+		border-top: 1px solid var(--border);
+	}
+
+	a.writing-item .writing-title {
+		color: var(--accent);
+	}
+
+	a.writing-item:hover .writing-title {
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+	}
+
+	.writing-item--soon {
+		opacity: 0.5;
+	}
+
+	.writing-title {
+		font-family: var(--font-ui);
+		font-size: 0.95rem;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		color: var(--text);
+		transition: color 0.15s;
+	}
+
+	.writing-desc {
+		font-family: var(--font-body);
+		font-size: 14px;
+		color: var(--text-muted);
+		line-height: 1.65;
+	}
+
+	.soon-badge {
+		font-family: var(--font-ui);
+		font-size: 9px;
+		font-weight: 400;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+		border: 1px solid var(--border);
+		padding: 0.15rem 0.5rem;
+		border-radius: 2px;
+	}
+
+	/* Contact */
+	#contact p {
+		font-family: var(--font-body);
+		font-size: 17px;
+		line-height: 1.8;
+		max-width: 480px;
+		color: var(--text-muted);
+	}
+
+	#contact a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	#contact a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-underline-offset: 3px;
+	}
+
+	/* Footer */
+	footer {
+		border-top: 1px solid var(--border);
+		padding: 1.75rem 0;
+	}
+
+	.footer-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	footer span {
+		font-family: var(--font-ui);
+		font-size: 11px;
+		font-weight: 400;
+		color: var(--text-muted);
+	}
+
+	/* Mobile */
+	@media (max-width: 600px) {
+		.wrap {
+			padding: 0 1.25rem;
+		}
+
+		.hero {
+			padding: 5rem 0 3.5rem;
+		}
+
+		section {
+			padding: 3.5rem 0;
+		}
+
+		.case {
+			padding: 1.25rem;
+		}
+
+		nav {
+			gap: 1.25rem;
+		}
+	}
+</style>
