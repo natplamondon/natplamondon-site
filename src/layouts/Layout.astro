@@ -1,60 +1,61 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Nat Plamondon — Product Marketing</title>
-		<meta name="description" content="Nat Plamondon is an Associate Director of Product Marketing specializing in portfolio positioning and M&A messaging integration at enterprise scale." />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
-		<style>
-			*, *::before, *::after {
-				box-sizing: border-box;
-				margin: 0;
-				padding: 0;
-			}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nat Plamondon — Product Marketing</title>
+    <meta name="description" content="Nat Plamondon is an Associate Director of Product Marketing specializing in portfolio positioning and M&A messaging integration at enterprise scale." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-			:root {
-				--bg: #1E2620;
-				--bg-surface: #242D26;
-				--text: #F0EBE1;
-				--text-muted: #B8B0A4;
-				--accent: #C8922A;
-				--accent-secondary: #7A9E7E;
-				--border: #2E3830;
-				--font-ui: 'Syne', sans-serif;
-				--font-body: 'Lora', Georgia, serif;
-				--max-w: 780px;
-			}
+      :root {
+        --bg: #F2EFE9;
+        --bg-surface: #FFFFFF;
+        --bg-stat: #FFFFFF;
+        --text: #1A1A1A;
+        --text-muted: #666660;
+        --accent: #B07D2A;
+        --accent-secondary: #2C4A3E;
+        --border: #DDD9D0;
+        --font-ui: 'Syne', sans-serif;
+        --font-body: 'Lora', Georgia, serif;
+        --max-w: 780px;
+      }
 
-			html {
-				background: var(--bg);
-				color: var(--text);
-				font-family: var(--font-body);
-				font-size: 16px;
-				line-height: 1.75;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-			}
+      html {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
 
-			body {
-				margin: 0;
-				min-height: 100vh;
-				background: var(--bg);
-			}
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+      }
 
-			a {
-				color: var(--accent);
-				text-decoration: none;
-				text-underline-offset: 3px;
-			}
-		</style>
-	</head>
-	<body>
-		<slot />
-	</body>
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        text-underline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
