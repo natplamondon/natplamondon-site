@@ -10,8 +10,8 @@ import Layout from '../layouts/Layout.astro';
 				<span class="site-name">Nat Plamondon</span>
 				<nav>
 					<a href="#work">Work</a>
-					<a href="#writing">Writing</a>
-					<a href="#contact">Contact</a>
+				<a href="#contact">Contact</a>
+
 				</nav>
 			</div>
 		</header>
@@ -25,8 +25,6 @@ import Layout from '../layouts/Layout.astro';
 					<p>I build the framework when there isn't one yet. Ten years of platform repositioning, acquisition messaging integration, and the category work that has to hold up across an entire company — not just a launch.</p>
 				</div>
 			</section>
-
-			<hr />
 
 			<section id="work">
 				<div class="section-header">
@@ -43,6 +41,10 @@ import Layout from '../layouts/Layout.astro';
 						<h3>From Learning Suite to Workforce Agility Platform</h3>
 						<p>Cornerstone had accumulated a strong product portfolio and a fragmented story. L&D buyers heard the LMS narrative. HR buyers heard the performance narrative. Executive buyers heard nothing coherent. The individual products were defensible; the platform wasn't.</p>
 						<p>The work was to find the unifying outcome that every product could honestly claim to serve — and build a messaging architecture from that outcome down to the product level, precise enough that a global sales and marketing team could execute it without drift. The result was a platform narrative anchored in workforce agility: the idea that the most durable competitive advantage is an organization's ability to continuously adapt its people. That repositioning produced a 440% increase in multi-product adoption.</p>
+						<div class="outcome">
+							<span class="outcome-number">440%</span>
+							<span class="outcome-label">increase in multi-product adoption</span>
+						</div>
 					</article>
 
 					<article class="case">
@@ -61,36 +63,16 @@ import Layout from '../layouts/Layout.astro';
 						<h3>Making Two Acquisitions Make Sense: Edcast &amp; SkyHive</h3>
 						<p>Cornerstone acquired EdCast and SkyHive in quick succession — an enterprise learning experience platform and an AI-powered skills intelligence engine. Both brought distinct technology, distinct buyers, and distinct market identities. The standard playbook for acquisitions like this is to fold them into the mothership story and hope the details sort themselves out. The result is usually language that makes both companies sound smaller than they were.</p>
 						<p>The work was integration without erasure. That meant identifying what each acquisition strengthened in the platform narrative, what needed to change and what needed to stay, and building the specific language bridges that let sales tell a coherent combined story fast enough to support go-to-market momentum through the transition. SkyHive grew approximately 100% year-over-year in its first full year as part of Cornerstone.</p>
+						<div class="outcome">
+							<span class="outcome-number">~100%</span>
+							<span class="outcome-label">year-over-year growth in first year post-acquisition</span>
+						</div>
 					</article>
 
 				</div>
 			</section>
 
-			<hr />
-
-			<section id="writing">
-				<div class="section-header">
-					<h2 class="section-label">Writing</h2>
-					<p class="section-intro">Thinking on portfolio positioning, acquisition messaging, and the problems in product marketing that don't get talked about enough.</p>
-				</div>
-
-				<ul class="writing-list">
-					<li>
-						<a href="https://www.linkedin.com/in/nathanielplamondon/" target="_blank" rel="noopener" class="writing-item">
-							<span class="writing-title">LinkedIn</span>
-							<span class="writing-desc">Posts on positioning, PMM craft, and enterprise SaaS — the ongoing conversation.</span>
-						</a>
-					</li>
-					<li class="writing-item writing-item--soon">
-						<span class="writing-title">Substack <span class="soon-badge">Coming soon</span></span>
-						<span class="writing-desc">Longer-form writing on portfolio positioning, M&A messaging, and the overlooked problems in product marketing.</span>
-					</li>
-				</ul>
-			</section>
-
-			<hr />
-
-			<section id="contact">
+<section id="contact">
 				<div class="section-header">
 					<h2 class="section-label">Contact</h2>
 				</div>
@@ -162,7 +144,7 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Hero */
 	.hero {
-		padding: 8rem 0 5rem;
+		padding: 4rem 0 2.5rem;
 	}
 
 	h1 {
@@ -172,6 +154,7 @@ import Layout from '../layouts/Layout.astro';
 		line-height: 1.15;
 		color: var(--text);
 		margin-bottom: 2rem;
+		max-width: 620px;
 	}
 
 	.hero-body {
@@ -202,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Sections */
 	section {
-		padding: 5rem 0;
+		padding: 2.75rem 0;
 	}
 
 	.section-header {
@@ -210,19 +193,31 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.section-label {
-		font-family: var(--font-body);
-		font-size: 13px;
-		font-weight: 400;
-		font-style: italic;
-		letter-spacing: 0.04em;
-		color: var(--text-muted);
-		margin-bottom: 1.5rem;
+		font-family: var(--font-ui);
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--text);
+		margin-bottom: 2rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.section-label::after {
+		content: '';
+		display: block;
+		flex: 1;
+		height: 1px;
+		background: var(--border);
 	}
 
 	.section-intro {
 		font-family: var(--font-body);
-		font-size: 17px;
-		color: var(--text-muted);
+		font-size: 16px;
+		color: var(--text);
+		opacity: 0.7;
 		max-width: 540px;
 		line-height: 1.8;
 	}
@@ -231,14 +226,15 @@ import Layout from '../layouts/Layout.astro';
 	.case-list {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 0.75rem;
 	}
 
 	.case {
 		background: var(--bg-surface);
 		border: 1px solid var(--border);
-		border-radius: 8px;
-		padding: 1.5rem;
+		border-left: 3px solid var(--accent-secondary);
+		border-radius: 0 6px 6px 0;
+		padding: 1.75rem;
 	}
 
 	.case-meta {
@@ -274,6 +270,32 @@ import Layout from '../layouts/Layout.astro';
 
 	.case p:last-child {
 		margin-bottom: 0;
+	}
+
+	.outcome {
+		display: flex;
+		align-items: baseline;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.outcome-number {
+		font-family: var(--font-ui);
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--accent);
+		line-height: 1;
+	}
+
+	.outcome-label {
+		font-family: var(--font-body);
+		font-size: 12px;
+		font-style: italic;
+		color: var(--text-muted);
+		line-height: 1.4;
+		max-width: 280px;
 	}
 
 	/* Writing */
